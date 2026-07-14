@@ -2,7 +2,7 @@
   "name": "tienda-productos-organicos",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://yefersn15.github.io/Proyecyo_Five/",
+  "homepage": "https://yefersn15.github.io/Proyecto_Five/",
   "type": "module",
   "scripts": {
     "dev": "vite",
