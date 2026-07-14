@@ -11,8 +11,9 @@
  * 4. Instalar la biblioteca googleapis con: npm install googleapis
  */
 
-// Importamos la URL de la hoja de cálculo desde las variables de entorno
+// Importamos la URL de la hoja de cálculo y del Apps Script desde las variables de entorno
 const GOOGLE_SHEET_URL = import.meta.env.VITE_GOOGLE_SHEET_ENDPOINT;
+const APPS_SCRIPT_URL = import.meta.env.VITE_APPS_SCRIPT_URL || 'https://script.google.com/macros/s/AKfycbxP_EE_466lOOG1UeaJR7tIe8gOTr0b26PsgcQb8TeQH1Qyn9OIJ1z60HHmw0F5_Er1/exec';
 
 /**
  * Extrae el ID de la hoja de cálculo de Google desde la URL
@@ -270,7 +271,7 @@ export const sendContactMessage = async (messageData) => {
     console.log('Enviando mensaje de contacto:', dataToSend);
 
     // URL del Web App de Google Apps Script
-    const webAppUrl = 'https://script.google.com/macros/s/AKfycbxP_EE_466lOOG1UeaJR7tIe8gOTr0b26PsgcQb8TeQH1Qyn9OIJ1z60HHmw0F5_Er1/exec';
+    const webAppUrl = APPS_SCRIPT_URL;
 
     // MODO DE PRODUCCIÓN: Envío real a Google Apps Script
     console.log('📤 Enviando datos reales a Google Sheets...');
